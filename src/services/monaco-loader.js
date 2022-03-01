@@ -47,6 +47,7 @@ export default {
         resolve: () => {
           if (loaderPending) {
             window.require.config(config)
+            window.require.config({ 'vs/nls': { availableLanguages: { '*': 'zh-cn' } } })
             loaderPending = false
           }
 
